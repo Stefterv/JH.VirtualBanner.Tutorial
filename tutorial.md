@@ -11,7 +11,8 @@
 - Create a new profile?!
 - Install the pico extension - https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico
     - Search for pico in the extensions
-
+![](./screenshots/Screenshot%202026-03-24%20at%2017.59.14.png)
+![]
 
 ### Setting up the pico
 - Connect the pico with the usb cable to the computer
