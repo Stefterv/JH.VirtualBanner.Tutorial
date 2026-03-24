@@ -38,14 +38,31 @@ ap = access_point("Pico W Captive")
 ```
 - run, if you now open your mobile phone and look for wifi networks you should see "Pico W Captive"
 - add the following to existing from statement
-```diff
-- from phew import access_point
-+ from phew import access_point, dns
+```python
+from phew.server import redirect
 
-ap = access_point("Pico W Captive")
-+ # Grab the IP address and store it
-+ logging.info(f"starting DNS server on {ip}")
-+ # # Catch all requests and reroute them
-+ ip = ap.ifconfig()[0]
-+ dns.run_catchall(ip)
+@server.route("/", methods=['GET'])
+def index(request):
+    """ Render the Index page"""
+    if request.method == 'GET':
+        print("Request received")
+        return "Hello World"
+
+@server.catchall()
+def catch_all(request):
+    return redirect("http://hello.world/")
+
+# Grab the IP address and store it
+ip = ap.ifconfig()[0]
+# Catch all requests and reroute them
+dns.run_catchall(ip)
+server.run()
 ```
+- this will create a captive portal, if you try to open any website it will redirect you to http://hello.world/, show Hello World on the page and print "Request received" in the console
+
+### Customisation
+- You can change the name of the wifi network by changing the string in `access_point("Pico W Captive")`
+- You can change the response by changing the string in `return "Hello World"`
+- You can change the redirect url by changing the string in `redirect("http://hello.world/")`
+
+### Troubleshooting
