@@ -8,7 +8,7 @@
 - USB Cable
 
 ### Setting up vscode
-- Create a new profile?!
+- Install VS Code - https://code.visualstudio.com/download
 - Install the pico extension - https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico
     - Search for pico in the extensions
 
@@ -18,14 +18,12 @@
 - Open the Pico tools in VS Code
 
 ![Find the Pico tooling in VS Code](./screenshots/03-extension-find.png)
-![VS Code setup screenshot](./screenshots/Screenshot%202026-03-24%20at%2017.42.52.png)
 
 ### Setting up the pico
 - Connect the pico with the usb cable to the computer
 - Create a new Pico project in VS Code
 
 ![Create a new project](./screenshots/04-project-new.png)
-![Create a new project step 2](./screenshots/05-project-new.png)
 
 - Choose a project name
 
@@ -35,7 +33,7 @@
 
 ![Trust the project workspace](./screenshots/07-project-trust.png)
 
-- Put the Pico into BOOTSEL mode
+- The pico might be in BOOTSEL mode, click Yes to install the firmware
 
 ![Boot the Pico in BOOTSEL mode](./screenshots/08-pi-bootsel.png)
 
@@ -47,7 +45,7 @@
 
 ![Pico is ready in VS Code](./screenshots/10-ready.png)
 
-- Open the blink.py
+- Open the `blink.py`
 - Click run in the bottom corner
 
 ![Run the project on the Pico](./screenshots/11-run.png)
