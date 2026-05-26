@@ -80,7 +80,7 @@ https://tinyurl.com/jhcaptive
 ### Captive portal
 - create `main.py` !! SCREENSHOT !!
 ```python
-from phew import access_point
+from phew import access_point, server, dns
 
 ap = access_point("Pico W Captive")
 ```
