@@ -1,5 +1,6 @@
-# Raspberry PI - Title Here
-- 
+# Baue dein eigenes Captive Portal mit dem Raspberry Pi Pico
+
+Deutsche Version: [README.de.md](./README.de.md)
 
 ### What do you need
 - Laptop (Windows, macOS or Linux)
@@ -70,18 +71,18 @@
 ![Locate the phew folder](./screenshots/15-phew-folder.png)
 ![Copy the phew folder into the project](./screenshots/16-phew-copy.png)
 
-- right click in the explorer and upload to pico
+- Right click in the explorer and upload to pico
 
 ![Upload the phew folder to the Pico](./screenshots/17-phew-upload.png)
 
 ### Captive portal
-- create `main.py`
+- create `main.py` !! SCREENSHOT !!
 ```python
 from phew import access_point
 
 ap = access_point("Pico W Captive")
 ```
-- run, if you now open your mobile phone and look for wifi networks you should see "Pico W Captive"
+- run, if you now check the available wifi networks on your device you should see "Pico W Captive"
 - add the following to existing from statement
 ```python
 from phew.server import redirect
@@ -146,6 +147,8 @@ def index(request):
         return html
 ```
 
+!! Upload files to Pico !!
+
 
 ### Hardware
 - The Pico W has an onboard LED, you can control it using the `machine` module
@@ -153,7 +156,9 @@ def index(request):
 from machine import Pin
 led = Pin("LED", Pin.OUT)
 ```
-- add a new route to toggle the LED
+- add a new route to toggle the LED 
+
+!! W/O `render_template` !!
 ```python
 @server.route("/blink", methods=['GET'])
 def blink(request):

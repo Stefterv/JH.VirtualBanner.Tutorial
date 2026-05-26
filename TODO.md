@@ -1,0 +1,3 @@
+- [ ] Expand section around hardware
+- [ ] Translate to German
+- [ ] Screenshots in Linux?
