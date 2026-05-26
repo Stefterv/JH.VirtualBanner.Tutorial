@@ -1,6 +1,6 @@
 # Baue dein eigenes Captive Portal mit dem Raspberry Pi Pico
 
-Englische Version: [README.md](./README.md)
+🇬🇧 🇬🇧 Englische Version: [README.md](./README.md)
 
 ### Was brauchst du?
 - Laptop (Windows, macOS oder Linux)
