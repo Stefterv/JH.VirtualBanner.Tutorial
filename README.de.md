@@ -160,7 +160,6 @@ led = Pin("LED", Pin.OUT)
 ```
 - Fuge eine neue Route hinzu, um die LED umzuschalten
 
-!! Ohne `render_template` !!
 ```python
 @server.route("/blink", methods=['GET'])
 def blink(request):
@@ -168,7 +167,9 @@ def blink(request):
     if request.method == 'GET':
         led.toggle()
 
-        return render_template("index.html")
+        with open("index.html", "r") as file:
+            html = file.read()
+        return html
 ```
 - Fuge einen Button zur HTML-Datei hinzu, unterhalb des `<h1>`-Tags
 ```html
