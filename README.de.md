@@ -179,3 +179,20 @@ def blink(request):
 
 
 ### Fehlerbehebung
+
+### Static Files
+Füge die folgende Route zu deinem Projekt hinzu, um statische Dateien vom Pico auszuliefern. Du kannst dann auf diese Dateien unter `http://<pico_ip>/static/<file_name>` zugreifen.
+
+```python
+@server.route("/static/<file>", methods=['GET'])
+def serve_file(request, file):
+    """ Rendert die Startseite """
+    if request.method == 'GET':
+        try:
+            with open(file, "r") as f:
+                content = f.read()
+            return content
+        except FileNotFoundError:
+            return "File not found", 404
+
+```
