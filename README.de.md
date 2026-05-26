@@ -1,5 +1,7 @@
 # Baue dein eigenes Captive Portal mit dem Raspberry Pi Pico
 
+https://tinyurl.com/jhcaptive
+
 🇬🇧 🇬🇧 Englische Version: [README.md](./README.md)
 
 ### Was brauchst du?
