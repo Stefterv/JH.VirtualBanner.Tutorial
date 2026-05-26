@@ -166,7 +166,7 @@ led = Pin("LED", Pin.OUT)
 def blink(request):
     """ Rendert die Startseite """
     if request.method == 'GET':
-        pin.toggle()
+        led.toggle()
 
         return render_template("index.html")
 ```
